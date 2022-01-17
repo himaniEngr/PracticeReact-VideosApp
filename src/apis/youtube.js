@@ -5,11 +5,12 @@ const KEY = "AIzaSyBYYm319jSCj2fVi6xgccaWWpMvKwrszac";
 export default axios.create({
   baseURL: "https://www.googleapis.com/youtube/v3",
   params: {
-    part: snippet,
+    part: "snippet",
+    type: "video",
     maxResults: 5,
     key: KEY,
-    // q: "surfboards",
+    q: "surfboards",
   },
 });
 
-youtube.get("/search");
+// youtube.get("/search");
